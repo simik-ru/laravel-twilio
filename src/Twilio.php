@@ -99,6 +99,15 @@ class Twilio implements TwilioInterface
         $this->sid = $sid;
         return $this;
     }
+
+    public function setCredentials($sid, $token)
+    {
+        $this->sid = $sid;
+        $this->token = $token;
+        return $this;
+    }
+
+
     /**
      * @return \Services_Twilio
      */
