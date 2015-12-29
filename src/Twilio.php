@@ -94,6 +94,11 @@ class Twilio implements TwilioInterface
         return $twilio->account->calls->create($from ?: $this->from, $to, $message, $options);
     }
 
+    public function setSid($sid)
+    {
+        $this->sid = $sid;
+        return $this;
+    }
     /**
      * @return \Services_Twilio
      */
