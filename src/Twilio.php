@@ -100,10 +100,12 @@ class Twilio implements TwilioInterface
         return $this;
     }
 
-    public function setCredentials($sid, $token)
+    public function setCredentials($sid, $token, $from = null)
     {
         $this->sid = $sid;
         $this->token = $token;
+        $this->from = $from ?: $this->from;
+        
         return $this;
     }
 
